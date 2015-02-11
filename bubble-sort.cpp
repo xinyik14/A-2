@@ -1,8 +1,8 @@
 //============================================================================
 // Name        : bubble-sort.cpp
-// Author      : 
-// Date        :
-// Copyright   : 
+// Author      : Xinyi(Kathy) Zhang
+// Date        : 2/10/2015
+// Copyright   : Base on Leyk's notes
 // Description : Implementation of bubble sort in C++
 //============================================================================
 
@@ -23,7 +23,7 @@ BubbleSort::sort(int A[], int size)			// main entry point
  		}
  		if (!cont) break;
  	}
-  /* Complete this function with the implementation of bubble sort algorithm 
+    /* Complete this function with the implementation of bubble sort algorithm
      Record number of comparisons in variable num_cmps of class Sort
   */
 }

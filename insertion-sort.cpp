@@ -1,8 +1,8 @@
 //============================================================================
 // Name        : insertion-sort.cpp
-// Author      : 
-// Date        :
-// Copyright   : 
+// Author      : Xinyi(Kathy) Zhang
+// Date        : 2/10/2015
+// Copyright   : Base on Leyk's notes
 // Description : Implementation of insertion sort in C++
 //============================================================================
 
