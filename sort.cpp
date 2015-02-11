@@ -111,9 +111,6 @@ int main(int argc, char** argv)
     
    /* read input integers */
    int* A=new int[size]; //stores integers  
-
-
-
    if (readInput(A,size)) //call global function
       return 1; //exit abnormally
 
@@ -149,10 +146,7 @@ int main(int argc, char** argv)
    clock_t start = clock();
    
    /* call sorting function to sort */
-   
-      s->sort(A,size);  
-   }
-   
+   s->sort(A,size);  
    
    /* end timing */
    clock_t finish = clock();
