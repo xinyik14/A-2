@@ -34,7 +34,7 @@
 #include "option.h"
 #include "sort.h"
 #include <limits>
-
+#include <math.h>
 using namespace std;
 
 /* read input sequence from STDIN */
@@ -111,11 +111,8 @@ int main(int argc, char** argv)
     
    /* read input integers */
    int* A=new int[size]; //stores integers  
-
-
-
-   if (readInput(A,size)) //call global function
-      return 1; //exit abnormally
+   // if (readInput(A,size)) //call global function
+   //    return 1; //exit abnormally
 
    /* show unsorted input sequence */
    if (op.showInput()) {
@@ -145,18 +142,34 @@ int main(int argc, char** argv)
          break;
       }
   
-   /* begin timing the chosen algorithm using time.h library*/
-   clock_t start = clock();
-   
-   /* call sorting function to sort */
-   
-      s->sort(A,size);  
+  int T = 0;
+  for(int i = 0; i < 7; i++){
+   for(int j = 0; j < 10; j++){
+
+
+     if (readInput(A,size)) //call global function
+         return 1; //exit abnormally
+      /* begin timing the chosen algorithm using time.h library*/
+      clock_t start = clock();
+      
+      /* call sorting function to sort */
+      
+      s->sort(A,size); 
+      /* end timing */
+
+      clock_t finish = clock();
+
+      int t = (double)(finish-start)*1000/CLOCKS_PER_SEC;
+
+      T += t;
+      if(T%t != 0){
+         cout<<"Error, the running times are not the same for the same array using same algorithm."<<endl;
+         return 1;
+      }
    }
-   
-   
-   /* end timing */
-   clock_t finish = clock();
-   
+  }
+   T /= pow(10,7);
+
    /* output sorted sequence */
    if (op.showOutput()) {
       cout << "Sorted sequence:" << endl;
@@ -166,7 +179,7 @@ int main(int argc, char** argv)
    /* show running time of the algorithm to sort input data */
    if (op.showTime())
       cout << "Running time: "
-           << (double)(finish-start)*1000/CLOCKS_PER_SEC
+           << T
            << " ms" << endl;
 
    /* show number of comparisons in the algorithm */
