@@ -1,8 +1,8 @@
 //============================================================================
 // Name        : selection-sort.cpp
-// Author      : 
-// Date        :
-// Copyright   : 
+// Author      : Xinyi(Kathy) Zhang 
+// Date        : 2/10/2015
+// Copyright   : Based on Leyk's notes
 // Description : Implementation of selection sort in C++
 //============================================================================
 
