@@ -144,8 +144,10 @@ int main(int argc, char** argv)
   
 
   double T = 0;
+  
+  int n = pow(10, 7);
 
-  for(int i = 0; i < pow(10, 7); i++){
+  for(int i = 0; i < n; i++){
 
       if ((input_file=op.getInputFile()) &&
          freopen(input_file, "r", stdin) == 0) {
@@ -168,17 +170,12 @@ int main(int argc, char** argv)
       double t = (double)(finish-start)*1000/CLOCKS_PER_SEC;
 
       T += t;
-      cout<<i<<"'s round, T is "<<T<<endl;
       
       if(i>0){
          T /= 2;
-         cout<<"Average is "<<T<<endl;
-      }//get the average of time 
-      
-      if(T != t){
-         cout<<i<<"Error, the running times are not the same for the same array using same algorithm."<<endl;
-         return 1;
-      }//make sure the time is constant
+
+      }//get the average of time
+          
 
   }
 
