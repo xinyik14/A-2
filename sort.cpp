@@ -147,22 +147,24 @@ int main(int argc, char** argv)
   
   int n = pow(10, 7);
 
+  int* B = new int[size];
+
   for(int i = 0; i < n; i++){
+      // if ((input_file=op.getInputFile()) &&
+      //    freopen(input_file, "r", stdin) == 0) {
+      //       cerr << "sort: " << input_file << ": no such file" << endl;
+      //    return 1;
+      // }
 
-      if ((input_file=op.getInputFile()) &&
-         freopen(input_file, "r", stdin) == 0) {
-            cerr << "sort: " << input_file << ": no such file" << endl;
-         return 1;
-      }
-
-     if (readInput(A,size)) //call global function
-         return 1; //exit abnormally
+     // if (readInput(A,size)) //call global function
+         // return 1; //exit abnormally
       /* begin timing the chosen algorithm using time.h library*/
+      memcpy(B, A, size*sizeof(int));
       clock_t start = clock();
       
       /* call sorting function to sort */
       
-      s->sort(A,size); 
+      s->sort(B,size); 
       /* end timing */
 
       clock_t finish = clock();
@@ -170,15 +172,14 @@ int main(int argc, char** argv)
       double t = (double)(finish-start)*1000/CLOCKS_PER_SEC;
 
       T += t;
-      
+
       if(i>0){
          T /= 2;
-
       }//get the average of time
-          
-
   }
 
+  memcpy(A, B, size*sizeof(int));
+  delete[] B;
    
 
    /* output sorted sequence */
