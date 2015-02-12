@@ -2,7 +2,8 @@
 // Name        : radix-sort.cpp
 // Author      : Xinyi(Kathy) Zhang
 // Date        : 2/10/2015
-// Copyright   : yes(but partially based on couting sort algorithm in notes)
+
+// Copyright   : Most parts are original, but partially based on the counting sort algorithm in Leyk's notes
 // Description : Implementation of radix sort in C++
 //============================================================================
 

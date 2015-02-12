@@ -142,6 +142,7 @@ int main(int argc, char** argv)
          break;
       }
   
+
   double T = 0;
 
   for(int i = 0; i < pow(10, 7); i++){
@@ -180,6 +181,7 @@ int main(int argc, char** argv)
       }//make sure the time is constant
 
   }
+
    
 
    /* output sorted sequence */

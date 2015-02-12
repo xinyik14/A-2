@@ -2,7 +2,8 @@
 // Name        : shell-sort.cpp
 // Author      : Kathy(Xinyi) Zhang
 // Date        : 2/10/2015
-// Copyright   : Base on Leyk's notes
+
+// Copyright   : Based on Leyk's notes
 // Description : Implementation of shell sort in C++
 //============================================================================
 
