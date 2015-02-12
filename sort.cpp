@@ -31,6 +31,8 @@
 #include <iterator>
 #include <ctime>
 #include <cstdio>
+#include <stdio.h>
+#include <string.h>
 #include "option.h"
 #include "sort.h"
 #include <limits>
