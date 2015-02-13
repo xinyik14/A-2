@@ -175,8 +175,8 @@ int main(int argc, char** argv)
 
       T += t;
 
-      if(i>0){
-         T /= 2;
+     if(i>0){
+        T /= 2;
       }//get the average of time
   }
 
